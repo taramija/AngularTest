@@ -1,0 +1,32 @@
+#myBox{
+	background-color:#000;
+	width: 100px;
+	height: 100px;
+	display: block;
+	border: 1px solid #000;
+	position: absolute;
+	animation-name: myanimation;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+#myBox2{
+	background-color:#000;
+	width: 100px;
+	height: 100px;
+	transition-property: background, border-radius, transform; /* or all */
+	transition-duration: 1s,3s,1s;
+	transition-timing-function: ease-in;
+}
+#myBox2:hover{
+	background: red;
+	border-radius: 50px;
+	transform: rotate(180deg);
+}
+
+@keyframes myanimation{
+	0% {background-color: yellow;top: 0;left: 0;border-top-left-radius:50px;border-top-right-radius: 50px;}
+	25% {background-color: green;top: 0;left: 100px;border-radius: 50px;}
+	50% {background-color: red;top: 100px;left: 100px;border-bottom-right-radius: 50px;border-top-right-radius: 50px;}
+	75% {background-color: blue;top: 100px;left: 0;border-top-right-radius: 0;border-bottom-left-radius: 0;}
+	100% {background-color: yellow;top: 0;left: 0;border-top-left-radius:50px;border-top-right-radius: 50px;}
+}
